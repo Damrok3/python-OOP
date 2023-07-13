@@ -85,6 +85,8 @@ class Item:
         """
     
     def __send(self):
+        print("sopething probably shouldn't be printed here")
+        print("but i'm gonna write something, because i want to test stuff")
         pass
 
     def send_email(self):
