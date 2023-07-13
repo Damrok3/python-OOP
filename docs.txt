@@ -1,0 +1,66 @@
+ON __init__(self):
+this is a magic method which executes itself on class instance creation
+i can add there code that i want to be immiediately executed
+as i create an object.
+
+ON __repr__(self):
+this is a magic method which is used to change the way that class instance
+is represented. For example if put all of my class object into a list and then i will
+print out that list, thanks to that i can alter how those objects will be represented
+on the output.
+
+ON super().__init__():
+This is called a "super function". It allows us to inherit all the attributes of the 
+parent class. In case of our program here, thanks to it we're passing name, price and quanity.
+without it, we'd have to declare them seperately inside of a constructor which is bad because it's a code
+duplication. Basically it's like it's calling the __init__() function from the parent class.
+
+ON @staticmethod:
+This should do something that has a relationship with the class,
+but not something that must be unique per instance!
+
+ON @classmethod:
+class method passes the entire class itself into it as an argument
+This should also do something that has a relationship with the class, 
+but usually those are used thosemanipulate different structures of data 
+to instantiate objects like we have done with CSV.
+
+ON @property:
+Will basically give you control of what you'd like to do when you get the atrribute
+Here by using it we converted the name variable into read only value.
+
+ON @name.setter:
+Basically execudes code under it, when you're trying to set value of the variable
+that you specified under @property
+
+ON is_integer():
+this is a method belonging to the float class.
+It's used for checking whether our float is an int
+e.g. 7.0 will return true but 7.4 will return false
+
+On isinstance():
+this checks whether passed argument is an instance of the type
+that we're checking
+
+ON #f-string:
+Formatted string literal. It's a special way to print out the strings
+e.g. print(f"this is an example that has {variable1} in it")
+will print me out a string of text putting also variables inide of it, without the need
+to break it down into seperate prints, or writing after a comma.
+
+ENCAPSULATION:
+Refers to a mechanism of restrincting the direct 
+acces to some of the attributes in our program.
+
+ABSTRACTION:
+Abstraction is concept of object oriented programming that only shows the necesarry attributes
+and hides the unnecesarry information. It's basically hiding unnecesarry details from the users.
+
+POLYMORPHISM:
+It refers to single type entitiy, to represent different types in different scenarios.
+
+
+
+
+
+
