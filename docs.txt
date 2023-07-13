@@ -58,6 +58,9 @@ and hides the unnecesarry information. It's basically hiding unnecesarry details
 
 POLYMORPHISM:
 It refers to single type entitiy, to represent different types in different scenarios.
+For example len() built in function. For a string, returns number of characters in that string.
+But for example for a list, it will return number of items in a list.
+
 
 
 
