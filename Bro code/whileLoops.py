@@ -4,7 +4,7 @@
 
 name = None
 
-while not name == 0:
+while not name:
     name = input("Enter your name: ")
 
 print("hello "+name)
