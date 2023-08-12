@@ -1,7 +1,7 @@
 from tkinter import *
 
 def submit():
-    print("the temperatur is: " + str(scale.get())+" degrees C")
+    print("the temperature is: " + str(scale.get())+" degrees C")
 
 window = Tk()
 
