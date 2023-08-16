@@ -13,7 +13,7 @@ local_time = time.strftime("%B-%d-%Y %H:%M:%S", time_object)
 print(local_time)
 
 time_string = "20 April, 2020"
-time_object1 = time.strptime(time_string, "%d %B, %Y")
+time_object1 = time.strptime(time_string, "%d %B, %Y") # parses a string representing a time according to a format.
 print(time.strftime("%d-%B-%Y",time_object1))
 
 # (year, month, day, hours, minutes, secs, #day of the week, #day of the year, #daylight savings time)
