@@ -3,7 +3,7 @@ from tkinter import *
 def button_press(num):
     global equation_text
     equation_text = equation_text + str(num)
-    label.config(width=24, height=2, anchor=E, font=("consolas", 20))
+    label.config(anchor=E)
     equation_var.set(equation_text)
 
 def equals():
@@ -13,7 +13,7 @@ def equals():
         equation_var.set(total)
         equation_text = total
     except ZeroDivisionError:
-        label.config(anchor=W, font=10, width=40, height=3)
+        label.config(anchor=W)
         equation_var.set("E")
         equation_text = ""
     except SyntaxError:
@@ -71,17 +71,17 @@ button9.grid(row=2, column=2)
 button0 = Button(frame, text=0, height=4, width=9, font=35, command= lambda: button_press(0))
 button0.grid(row=3, column=0)
 
-buttonplus = Button(frame, text="+", height=4, width=9, font=35, command= lambda: button_press("+"))
+buttonplus = Button(frame, text="/", height=4, width=9, font=35, command= lambda: button_press("/"))
 buttonplus.grid(row=0, column=3)
 
-buttonminus = Button(frame, text="-", height=4, width=9, font=35, command= lambda: button_press("-"))
+buttonminus = Button(frame, text="*", height=4, width=9, font=35, command= lambda: button_press("*"))
 buttonminus.grid(row=1, column=3)
 
-buttonmultiply = Button(frame, text="*", height=4, width=9, font=35, command= lambda: button_press("*"))
+buttonmultiply = Button(frame, text="-", height=4, width=9, font=35, command= lambda: button_press("-"))
 buttonmultiply.grid(row=2, column=3)
 
-buttondivide = Button(frame, text="/", height=4, width=9, font=35, command= lambda: button_press("/"))
-buttondivide.grid(row=3, column=3)
+buttondivide = Button(frame, text="+", height=9, width=9, font=35, command= lambda: button_press("+"))
+buttondivide.grid(row=3, column=3, rowspan=2)
 
 buttonequal = Button(frame, text="=", height=4, width=9, font=35, command= equals)
 buttonequal.grid(row=3, column=2)
@@ -89,7 +89,7 @@ buttonequal.grid(row=3, column=2)
 buttondecimal = Button(frame, text=".", height=4, width=9, font=35, command= lambda: button_press("."))
 buttondecimal.grid(row=3, column=1)
 
-buttonclear = Button(window, text="C", height=4, width=12, font=35, command= clear)
-buttonclear.pack()
+buttonclear = Button(frame, text="C", height=4, width=29, font=35, command= clear)
+buttonclear.grid(row=4, column=0, columnspan=3)
 
 window.mainloop()
